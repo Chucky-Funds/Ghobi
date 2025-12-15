@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sure Ghobi | Secure Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ------------------------------------------------------------------
+           1. CORE VARIABLES & RESET
+           ------------------------------------------------------------------ */
+        :root {
+            --color-bg: #050508;
+            --color-surface: rgba(20, 20, 35, 0.65);
+            --color-surface-hover: rgba(30, 30, 50, 0.8);
+            --primary-purple: #8A2BE2;
+            --primary-purple-glow: rgba(138, 43, 226, 0.6);
+            --accent-blue: #00E5FF;
+            --accent-pink: #FF00E0;
+            --text-main: #FFFFFF;
+            --text-muted: #A0A0B0;
+            --danger: #FF4455;
+            --success: #00E5A0;
+            
+            --font-main: 'Inter', sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+            
+            --radius-card: 18px;
+            --radius-input: 12px;
+            --radius-btn: 10px;
+            
+            --ease-elastic: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        * { box-sizing: border-box; outline: none; -webkit-tap-highlight-color: transparent; }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-bg);
+            background-image: radial-gradient(circle at 50% 10%, #2a104e 0%, #000000 60%);
+            color: var(--text-main);
+            font-family: var(--font-main);
+            min-height: 100vh;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ------------------------------------------------------------------
+           2. ANIMATED BACKGROUND (PARTICLES)
+           ------------------------------------------------------------------ */
+        .stars {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: drift 20s infinite linear;
+        }
+
+        @keyframes drift {
+            from { transform: translateY(0px); opacity: 0; }
+            50% { opacity: 0.5; }
+            to { transform: translateY(-100px); opacity: 0; }
+        }
+
+        /* ------------------------------------------------------------------
+           3. AUTH CONTAINER
+           ------------------------------------------------------------------ */
+        .auth-wrapper {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 440px;
+            padding: 20px;
+        }
+
+        .auth-card {
+            background: var(--color-surface);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: var(--radius-card);
+            padding: 40px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 20px rgba(138, 43, 226, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: cardEntrance 0.6s var(--ease-elastic) forwards;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes cardEntrance {
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Neon Glow Border Effect */
+        .auth-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
+            opacity: 0.7;
+        }
+
+        /* ------------------------------------------------------------------
+           4. HEADER & LOGO
+           ------------------------------------------------------------------ */
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+            border-top-color: var(--primary-purple);
+            border-bottom-color: var(--accent-blue);
+            border-radius: 50%;
+            animation: spin 4s linear infinite;
+            box-shadow: 0 0 15px var(--primary-purple-glow);
+        }
+
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+            text-shadow: 0 0 10px var(--primary-purple);
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtext {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* ------------------------------------------------------------------
+           5. SOCIAL AUTH (GITHUB STYLE)
+           ------------------------------------------------------------------ */
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-btn);
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .social-btn:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+        }
+
+        .social-btn svg { width: 18px; height: 18px; fill: white; }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 12px;
+            margin: 24px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+        }
+        .divider span { margin: 0 10px; }
+
+        /* ------------------------------------------------------------------
+           6. FORM SYSTEM (SLIDING STEPS)
+           ------------------------------------------------------------------ */
+        .form-stage-container {
+            position: relative;
+            overflow: hidden;
+            /* Height handled by JS to animate smoothly */
+            transition: height 0.3s ease;
+        }
+
+        .form-stage {
+            /* Absolute positioning for sliding effects, handled via classes */
+            width: 100%;
+            opacity: 0;
+            transform: translateX(20px);
+            position: absolute;
+            pointer-events: none;
+            transition: all 0.4s var(--ease-elastic);
+            visibility: hidden;
+        }
+
+        .form-stage.active {
+            position: relative;
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: all;
+            visibility: visible;
+        }
+
+        .form-stage.prev {
+            position: absolute;
+            transform: translateX(-40px);
+            opacity: 0;
+        }
+
+        /* INPUT STYLING */
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius-input);
+            padding: 16px;
+            color: white;
+            font-size: 16px; /* Prevents zoom on iOS */
+            font-family: var(--font-main);
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 12px rgba(138, 43, 226, 0.3);
+            background: rgba(0,0,0,0.5);
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .helper-text {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 6px;
+            transition: color 0.3s;
+        }
+
+        .helper-text.error { color: var(--danger); animation: shake 0.4s ease; }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        /* ------------------------------------------------------------------
+           7. PASSWORD STRENGTH & OTP
+           ------------------------------------------------------------------ */
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 42px;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .strength-meter {
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin-top: 10px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .strength-bar {
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+
+        .otp-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .otp-input {
+            width: 45px;
+            height: 55px;
+            text-align: center;
+            font-size: 24px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: white;
+        }
+        
+        .otp-input:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+        }
+
+        /* ------------------------------------------------------------------
+           8. CTA & FOOTER
+           ------------------------------------------------------------------ */
+        .btn-primary {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-purple);
+            border: none;
+            border-radius: var(--radius-btn);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.1s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        /* Loading Spinner */
+        .loader {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            left: 50%; top: 50%;
+            margin-left: -10px; margin-top: -10px;
+        }
+
+        .btn-primary.loading .btn-text { opacity: 0; }
+        .btn-primary.loading .loader { display: block; }
+
+        .auth-footer {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+
+        .auth-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .auth-link:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+            text-shadow: 0 0 8px var(--accent-blue);
+        }
+
+        /* ------------------------------------------------------------------
+           9. RESPONSIVE BREAKPOINTS
+           ------------------------------------------------------------------ */
+        @media (max-width: 480px) {
+            .auth-card { padding: 30px 20px; }
+            h1 { font-size: 22px; }
+            .auth-wrapper { padding: 10px; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Background -->
+    <div class="stars" id="starContainer"></div>
+
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            
+            <!-- Header Section -->
+            <div class="auth-header">
+                <div class="logo-container">
+                    <div class="logo-ring"></div>
+                    <div class="logo-text">SG</div>
+                </div>
+                <h1 id="headerTitle">Welcome Back</h1>
+                <p class="subtext" id="headerSubtext"><a href="index3.html">Sure Ghobi </a>protects your data with industry-grade security.</p>
+            </div>
+
+            <!-- Social Section -->
+            <div class="social-buttons" id="socialSection">
+                <button class="social-btn" onclick="handleSocialAuth('google')">
+                    <svg viewBox="0 0 24 24"><path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/></svg>
+                    Continue with Google
+                </button>
+                <button class="social-btn" onclick="handleSocialAuth('microsoft')">
+                    <svg viewBox="0 0 23 23"><path d="M0 0h11v11H0zM12 0h11v11H12zM0 12h11v11H0zM12 12h11v11H12z"/></svg>
+                    Continue with Microsoft
+                </button>
+            </div>
+
+            <div class="divider" id="divider"><span>or continue with email</span></div>
+
+            <!-- Form Flow Container -->
+            <div class="form-stage-container" id="formContainer">
+
+                <!-- STEP 1: EMAIL (Identity) -->
+                <div class="form-stage active" id="step-email">
+                    <div class="input-group">
+                        <label class="input-label">Email Address</label>
+                        <input type="email" class="input-field" id="inputEmail" placeholder="you@example.com" autocomplete="username">
+                        <small class="helper-text" id="emailHelper">We'll check if you have an account.</small>
+                    </div>
+                    <button class="btn-primary" onclick="processEmail()">
+                        <span class="btn-text">Next</span>
+                        <div class="loader"></div>
+                    </button>
+                </div>
+
+                <!-- STEP 2: PASSWORD (Login) -->
+                <div class="form-stage" id="step-password-login">
+                    <div class="input-group">
+                        <label class="input-label">Password</label>
+                        <input type="password" class="input-field" id="inputPassLogin" placeholder="Enter your password">
+                        <span class="password-toggle" onclick="togglePassword('inputPassLogin')">Show</span>
+                        <small class="helper-text" id="loginPassHelper">Your data is encrypted end-to-end.</small>
+                    </div>
+                    <button class="btn-primary" onclick="processLogin()">
+                        <span class="btn-text">Log In Securely</span>
+                        <div class="loader"></div>
+                    </button>
+                </div>
+
+                <!-- STEP 2: CREATE PASSWORD (Signup) -->
+                <div class="form-stage" id="step-password-signup">
+                    <div class="input-group">
+                        <label class="input-label">Create Password</label>
+                        <input type="password" class="input-field" id="inputPassSignup" placeholder="8+ chars, letters & numbers">
+                        <span class="password-toggle" onclick="togglePassword('inputPassSignup')">Show</span>
+                        <div class="strength-meter">
+                            <div class="strength-bar" id="strengthBar"></div>
+                        </div>
+                        <small class="helper-text" id="signupPassHelper">Must be at least 8 characters.</small>
+                    </div>
+                    <button class="btn-primary" onclick="processSignup()">
+                        <span class="btn-text">Create Account</span>
+                        <div class="loader"></div>
+                    </button>
+                </div>
+
+                <!-- STEP 3: OTP / VERIFICATION -->
+                <div class="form-stage" id="step-otp">
+                    <p style="font-size: 14px; text-align: center; margin-bottom: 20px; color: var(--text-muted);">
+                        We sent a code to <span style="color:white" id="displayEmail"></span>
+                    </p>
+                    <div class="otp-container" id="otpContainer">
+                        <input type="text" maxlength="1" class="otp-input">
+                        <input type="text" maxlength="1" class="otp-input">
+                        <input type="text" maxlength="1" class="otp-input">
+                        <input type="text" maxlength="1" class="otp-input">
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="btn-primary" onclick="processOTP()">
+                            <span class="btn-text">Verify & Continue</span>
+                            <div class="loader"></div>
+                        </button>
+                        <p style="font-size: 12px; margin-top: 15px; color: var(--text-muted); cursor: pointer;">Resend code in 30s</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Links -->
+            <div class="auth-footer">
+                <a href="#" class="auth-link" onclick="resetFlow()">Reset</a>
+                <div>
+                    <a href="#" class="auth-link">Privacy</a>
+                    <span style="color: #444; margin: 0 5px;">|</span>
+                    <a href="#" class="auth-link">Terms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ------------------------------------------------------------------
+           JAVASCRIPT LOGIC
+           ------------------------------------------------------------------ */
+        
+        // --- 1. CONFIG & STATE ---
+        const state = {
+            currentStep: 'email',
+            email: '',
+            isNewUser: false
+        };
+
+        const existingUsersDB = ['admin@sureghobi.com', 'user@gmail.com']; // Mock DB
+
+        // --- 2. INITIALIZATION (Particles) ---
+        function initParticles() {
+            const container = document.getElementById('starContainer');
+            for(let i=0; i<30; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDuration = (10 + Math.random() * 20) + 's';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(star);
+            }
+        }
+        initParticles();
+
+        // --- 3. NAVIGATION HELPERS ---
+        function setHeader(title, sub) {
+            const h1 = document.getElementById('headerTitle');
+            const p = document.getElementById('headerSubtext');
+            
+            // Subtle fade effect for text change
+            h1.style.opacity = 0;
+            p.style.opacity = 0;
+            
+            setTimeout(() => {
+                h1.innerText = title;
+                p.innerText = sub;
+                h1.style.opacity = 1;
+                p.style.opacity = 1;
+            }, 200);
+        }
+
+        function transitionTo(stepId) {
+            // Find current active step
+            const current = document.querySelector('.form-stage.active');
+            const next = document.getElementById(stepId);
+            
+            if(current) {
+                current.classList.remove('active');
+                current.classList.add('prev');
+            }
+
+            // Adjust Container Height for smoothness
+            /* In a real app we'd calculate offsetHeight, but here CSS transition handles flow nicely */
+            
+            setTimeout(() => {
+                next.classList.remove('prev'); // Reset position if revisiting
+                next.classList.add('active');
+            }, 50);
+
+            // Hide social buttons on deeper steps to clean UI
+            if(stepId !== 'step-email') {
+                document.getElementById('socialSection').style.display = 'none';
+                document.getElementById('divider').style.display = 'none';
+            }
+        }
+
+        function toggleLoading(btn, isLoading) {
+            if(isLoading) {
+                btn.classList.add('loading');
+                btn.disabled = true;
+            } else {
+                btn.classList.remove('loading');
+                btn.disabled = false;
+            }
+        }
+
+        function showError(elementId, msg) {
+            const el = document.getElementById(elementId);
+            el.innerText = msg;
+            el.classList.add('error');
+            
+            // Remove error class after animation to allow re-shake
+            setTimeout(() => el.classList.remove('error'), 500);
+        }
+
+        // --- 4. STEP 1: EMAIL LOGIC ---
+        function processEmail() {
+            const input = document.getElementById('inputEmail');
+            const btn = event.currentTarget; // Get button
+            const val = input.value.trim();
+            const helper = 'emailHelper';
+
+            // Simple Regex
+            if (!val.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                showError(helper, "Please enter a valid email address.");
+                return;
+            }
+
+            state.email = val;
+            toggleLoading(btn, true);
+
+            // SIMULATE SERVER CHECK
+            setTimeout(() => {
+                toggleLoading(btn, false);
+                state.isNewUser = !existingUsersDB.includes(val);
+
+                if (state.isNewUser) {
+                    setHeader("Create Account", "Join the galaxy's premium marketplace.");
+                    transitionTo('step-password-signup');
+                } else {
+                    setHeader("Welcome Back", "Enter your credentials to continue.");
+                    transitionTo('step-password-login');
+                }
+            }, 800);
+        }
+
+        // --- 5. STEP 2: PASSWORD LOGIC ---
+        
+        // Password Visibility Toggle
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+        }
+
+        // Strength Meter (Signup Only)
+        document.getElementById('inputPassSignup').addEventListener('input', function(e) {
+            const val = e.target.value;
+            const bar = document.getElementById('strengthBar');
+            const helper = document.getElementById('signupPassHelper');
+            
+            let strength = 0;
+            if(val.length > 5) strength += 25;
+            if(val.length > 8) strength += 25;
+            if(/[A-Z]/.test(val)) strength += 25;
+            if(/[0-9]/.test(val)) strength += 25;
+
+            bar.style.width = strength + '%';
+            
+            if(strength < 50) {
+                bar.style.backgroundColor = 'var(--danger)';
+                helper.innerText = "Too weak";
+            } else if (strength < 100) {
+                bar.style.backgroundColor = '#FFD700'; // Gold
+                helper.innerText = "Getting there...";
+            } else {
+                bar.style.backgroundColor = 'var(--success)';
+                helper.innerText = "Strong password!";
+            }
+        });
+
+        function processLogin() {
+            const input = document.getElementById('inputPassLogin');
+            const btn = event.currentTarget;
+            
+            if(input.value.length < 1) {
+                showError('loginPassHelper', "Password is required.");
+                return;
+            }
+
+            toggleLoading(btn, true);
+
+            // Simulate Auth
+            setTimeout(() => {
+                // Simulate "Suspicious activity" check occasionally
+                if(Math.random() > 0.7) {
+                    toggleLoading(btn, false);
+                    document.getElementById('displayEmail').innerText = state.email;
+                    setHeader("Security Check", "New device detected. Verify it's you.");
+                    transitionTo('step-otp');
+                } else {
+                    // Success
+                    window.location.reload(); // Just reloading for demo
+                }
+            }, 1000);
+        }
+
+        function processSignup() {
+            const input = document.getElementById('inputPassSignup');
+            const btn = event.currentTarget;
+            
+            if(input.value.length < 8) {
+                showError('signupPassHelper', "Password must be at least 8 chars.");
+                return;
+            }
+
+            toggleLoading(btn, true);
+
+            setTimeout(() => {
+                toggleLoading(btn, false);
+                document.getElementById('displayEmail').innerText = state.email;
+                setHeader("Verify Email", "We need to verify your identity.");
+                transitionTo('step-otp');
+            }, 1000);
+        }
+
+        // --- 6. OTP LOGIC ---
+        const otpInputs = document.querySelectorAll('.otp-input');
+        
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('keydown', (e) => {
+                if(e.key >= 0 && e.key <= 9) {
+                    input.value = ''; // Clear for new char
+                    setTimeout(() => {
+                        if(index < otpInputs.length - 1) otpInputs[index + 1].focus();
+                    }, 10);
+                } else if (e.key === 'Backspace') {
+                    if(index > 0 && input.value === '') otpInputs[index - 1].focus();
+                }
+            });
+        });
+
+        function processOTP() {
+            const btn = event.currentTarget;
+            toggleLoading(btn, true);
+
+            setTimeout(() => {
+                alert("Welcome to Sure Ghobi! (Demo Complete)");
+                toggleLoading(btn, false);
+                window.location.reload();
+            }, 1500);
+        }
+
+        // --- 7. SOCIAL AUTH SIMULATION ---
+        function handleSocialAuth(provider) {
+            // Find the specific button clicked
+            const btns = document.querySelectorAll('.social-btn');
+            btns.forEach(b => b.style.opacity = '0.5');
+            
+            setTimeout(() => {
+                alert(`Redirecting to ${provider} secure auth...`);
+                btns.forEach(b => b.style.opacity = '1');
+            }, 500);
+        }
+
+        function resetFlow() {
+            window.location.reload();
+        }
+
+    </script>
+</body>
+</html>

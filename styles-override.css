@@ -1,0 +1,17 @@
+/* Overrides for very small screens */
+
+/* Replace top-bar links with a single "Details ▾" label on very small screens */
+@media (max-width: 460px) {
+    .top-bar-links span { display: none !important; }
+    .top-bar-links::before {
+        content: 'Details ▾';
+        display: inline-block;
+        color: var(--text-gray);
+        font-weight: 600;
+        cursor: pointer;
+        padding: 6px 10px;
+        border-radius: 6px;
+        transition: background 160ms var(--transition-curve);
+    }
+    .top-bar-links::before:hover { background: rgba(255,255,255,0.03); }
+}

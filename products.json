@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "a3f9b1c2-d4e5-4a6b-9c0d-1e2f3a4b5c6d",
+    "name": "Signature Cotton Denim Jeans",
+    "category": "jeans",
+    "price": 38000,
+    "oldPrice": 47500,
+    "image": "images/p99.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "c7d8e9f1-2a3b-4c5d-8e9f-0a1b2c3d4e5f",
+    "name": "Everyday Linen Pullover Hoodie",
+    "category": "hoodie",
+    "price": 42000,
+    "oldPrice": 52500,
+    "image": "images/p98.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "d1e2f3a4-b5c6-4d7e-8f9a-0b1c2d3e4f5a",
+    "name": "Casual Twill Bomber Jacket",
+    "category": "jacket",
+    "price": 45000,
+    "oldPrice": 56250,
+    "image": "images/p97.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "e6f7a8b9-c0d1-4e2f-8a3b-1c2d3e4f5a6b",
+    "name": "Heritage Denim Trousers",
+    "category": "trousers",
+    "price": 3000,
+    "oldPrice": 3750,
+    "image": "images/p96.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "82d3c4b5-a6f7-4e1d-9c2b-0a1f2e3d4c5b",
+    "name": "Tailored Cotton Derby Shoes",
+    "category": "shoes",
+    "price": 3500,
+    "oldPrice": 4375,
+    "image": "images/p95.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "71c2b3a4-95e6-4d0c-8b1a-9f8e7d6c5b4a",
+    "name": "Comfort Suede Low-Top Sneakers",
+    "category": "sneakers",
+    "price": 4500,
+    "oldPrice": 5625,
+    "image": "images/p94.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "60b1a2c3-84d5-4c0b-9a1f-8e7d6c5b4a3f",
+    "name": "Minimal Linen Chino Shorts",
+    "category": "shorts",
+    "price": 5500,
+    "oldPrice": 6875,
+    "image": "images/p93.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "5f0e1d2c-73b4-4a9f-8d0c-7b6a5c4d3e2f",
+    "name": "Iconic Canvas Baseball Cap",
+    "category": "cap",
+    "price": 7500,
+    "oldPrice": 9375,
+    "image": "images/p92.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "4e0d1c2b-62a3-4f8e-9d0b-6a5c4b3e2f1d",
+    "name": "Structured Leather Leather Belt",
+    "category": "accessory",
+    "price": 9500,
+    "oldPrice": 11875,
+    "image": "images/p91.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "3d0c1b2a-5192-4e7f-8c0b-5a4d3c2b1e0f",
+    "name": "Classic Cotton T-Shirt 2",
+    "category": "t-shirt",
+    "price": 12500,
+    "oldPrice": 15625,
+    "image": "images/p90.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "2c0b1a29-4081-4d6e-9b0a-4f3e2d1c0b9a",
+    "name": "Modern Denim Denim Jeans 2",
+    "category": "jeans",
+    "price": 15000,
+    "oldPrice": 18750,
+    "image": "images/p9.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "1b0a1928-3070-4c5d-8a9f-3e2d1c0b9a8f",
+    "name": "Slim Fit Leather Pullover Hoodie 2",
+    "category": "hoodie",
+    "price": 18000,
+    "oldPrice": 22500,
+    "image": "images/p89.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "0a091827-2060-4b4c-9b8a-2d1c0b9a8f7e",
+    "name": "Relaxed Wool Bomber Jacket 2",
+    "category": "jacket",
+    "price": 22000,
+    "oldPrice": 27500,
+    "image": "images/p88.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "f1e2d3c4-b5a6-4d7e-9f0a-1b2c3d4e5f6a",
+    "name": "Vintage Linen T-Shirt 2",
+    "category": "t-shirt",
+    "price": 27000,
+    "oldPrice": 33750,
+    "image": "images/p87.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "e0d1c2b3-a4f5-4e6d-9c8b-0a1b2c3d4e5f",
+    "name": "Premium Polyester Denim Jeans 2",
+    "category": "jeans",
+    "price": 32000,
+    "oldPrice": 40000,
+    "image": "images/p86.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "dff0e1d2-c3b4-4a5d-9e0f-1b2c3d4e5f6b",
+    "name": "Soft Canvas Pullover Hoodie 3",
+    "category": "hoodie",
+    "price": 38000,
+    "oldPrice": 47500,
+    "image": "images/p85.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "cff1e2d3-b4a5-4c6d-9f0a-1e2d3c4b5a6f",
+    "name": "Essential Suede Bomber Jacket 3",
+    "category": "jacket",
+    "price": 42000,
+    "oldPrice": 52500,
+    "image": "images/p84.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "bff2e3d4-a5c6-4b7d-9e0f-2c3d4b5a6f7e",
+    "name": "Lightweight Knitted T-Shirt 3",
+    "category": "t-shirt",
+    "price": 45000,
+    "oldPrice": 56250,
+    "image": "images/p83.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "aff3e4d5-96b7-4a8c-9f0e-3d4b5a6f7e8c",
+    "name": "Urban Fleece Denim Jeans 3",
+    "category": "jeans",
+    "price": 3000,
+    "oldPrice": 3750,
+    "image": "images/p82.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "9ef4d5c6-b7a8-4c9d-8e0f-4b5a6f7e8c9d",
+    "name": "Sport Jersey T-Shirt 3",
+    "category": "t-shirt",
+    "price": 3500,
+    "oldPrice": 4375,
+    "image": "images/p81.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "8df5c6b7-a8e9-4d0f-9c1b-5a6f7e8c9d0b",
+    "name": "Signature Cotton Denim Jeans 4",
+    "category": "jeans",
+    "price": 4500,
+    "oldPrice": 5625,
+    "image": "images/p80.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "7ce6b5a4-9d8f-4e0c-1b2a-6f7e8c9d0b1a",
+    "name": "Everyday Linen Pullover Hoodie 4",
+    "category": "hoodie",
+    "price": 5500,
+    "oldPrice": 6875,
+    "image": "images/p8.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "6bd7a5c4-8e9f-4d0b-1c2a-7e8c9d0b1a2b",
+    "name": "Casual Twill Bomber Jacket 4",
+    "category": "jacket",
+    "price": 7500,
+    "oldPrice": 9375,
+    "image": "images/p79.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "5ac8b4d3-7f9e-4c0b-1d2a-8e9c0b1a2b3c",
+    "name": "Heritage Denim Trousers 2",
+    "category": "trousers",
+    "price": 9500,
+    "oldPrice": 11875,
+    "image": "images/p78.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "4ab9c3d2-6e8f-4b0a-1e2b-9c0d1a2b3c4d",
+    "name": "Tailored Cotton Derby Shoes 2",
+    "category": "shoes",
+    "price": 12500,
+    "oldPrice": 15625,
+    "image": "images/p77.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "d7c6b5a4-f3e2-4d1c-0f9a-8b7c6d5e4f3a",
+    "name": "Comfort Suede Low-Top Sneakers 2",
+    "category": "sneakers",
+    "price": 15000,
+    "oldPrice": 18750,
+    "image": "images/p76.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "c6b5a4f3-e2d1-4c0b-9a8f-7e6d5c4b3a2f",
+    "name": "Minimal Linen Chino Shorts 2",
+    "category": "shorts",
+    "price": 18000,
+    "oldPrice": 22500,
+    "image": "images/p75.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "b5a4f3e2-d1c0-4b9a-8f7e-6d5c4b3a2f1e",
+    "name": "Iconic Canvas Baseball Cap 2",
+    "category": "cap",
+    "price": 22000,
+    "oldPrice": 27500,
+    "image": "images/p74.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "a4f3e2d1-c0b9-4a8f-7e6d-5c4b3a2f1e0d",
+    "name": "Structured Leather Leather Belt 2",
+    "category": "accessory",
+    "price": 27000,
+    "oldPrice": 33750,
+    "image": "images/p73.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "93f2e1d0-c9b8-4a7f-6e5d-4c3b2a1f0e9d",
+    "name": "Classic Cotton T-Shirt 5",
+    "category": "t-shirt",
+    "price": 32000,
+    "oldPrice": 40000,
+    "image": "images/p72.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "a12b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+    "name": "Modern Denim Denim Jeans 5",
+    "category": "jeans",
+    "price": 38000,
+    "oldPrice": 47500,
+    "image": "images/p71.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "b23c4d5e-6f7a-4b8c-9d0e-1f2a3b4c5d6e",
+    "name": "Slim Fit Leather Pullover Hoodie 5",
+    "category": "hoodie",
+    "price": 42000,
+    "oldPrice": 52500,
+    "image": "images/p70.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "c34d5e6f-7a8b-4c9d-0e1f-2a3b4c5d6e7f",
+    "name": "Relaxed Wool Bomber Jacket 5",
+    "category": "jacket",
+    "price": 45000,
+    "oldPrice": 56250,
+    "image": "images/p7.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "d45e6f7a-8b9c-4d0e-1f2a-3b4c5d6e7f80",
+    "name": "Vintage Linen T-Shirt 6",
+    "category": "t-shirt",
+    "price": 3000,
+    "oldPrice": 3750,
+    "image": "images/p69.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "e56f7a8b-9c0d-4e1f-2a3b-4c5d6e7f8091",
+    "name": "Premium Polyester Denim Jeans 6",
+    "category": "jeans",
+    "price": 3500,
+    "oldPrice": 4375,
+    "image": "images/p68.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "f67a8b9c-0d1e-4f2a-3b4c-5d6e7f8091a2",
+    "name": "Soft Canvas Pullover Hoodie 6",
+    "category": "hoodie",
+    "price": 4500,
+    "oldPrice": 5625,
+    "image": "images/p67.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "0123abcd-4567-4e89-90ab-cdef12345678",
+    "name": "Essential Suede Bomber Jacket 6",
+    "category": "jacket",
+    "price": 5500,
+    "oldPrice": 6875,
+    "image": "images/p66.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "1234bcde-5678-4f90-12ab-cdef23456789",
+    "name": "Lightweight Knitted T-Shirt 6",
+    "category": "t-shirt",
+    "price": 7500,
+    "oldPrice": 9375,
+    "image": "images/p65.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "2345cdef-6789-4a01-23bc-def3456789ab",
+    "name": "Urban Fleece Denim Jeans 6",
+    "category": "jeans",
+    "price": 9500,
+    "oldPrice": 11875,
+    "image": "images/p64.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "3456def0-789a-4b12-34cd-ef456789ab01",
+    "name": "Sport Jersey T-Shirt 6",
+    "category": "t-shirt",
+    "price": 12500,
+    "oldPrice": 15625,
+    "image": "images/p63.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "4567ef01-89ab-4c23-45de-f56789ab0123",
+    "name": "Signature Cotton Denim Jeans 7",
+    "category": "jeans",
+    "price": 15000,
+    "oldPrice": 18750,
+    "image": "images/p62.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "5678f012-9abc-4d34-56ef-6789ab012345",
+    "name": "Everyday Linen Pullover Hoodie 7",
+    "category": "hoodie",
+    "price": 18000,
+    "oldPrice": 22500,
+    "image": "images/p61.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "67890123-abcd-4e45-67f0-789ab0123456",
+    "name": "Casual Twill Bomber Jacket 7",
+    "category": "jacket",
+    "price": 22000,
+    "oldPrice": 27500,
+    "image": "images/p60.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "78901234-bcde-4f56-78a1-89ab01234567",
+    "name": "Heritage Denim Trousers 3",
+    "category": "trousers",
+    "price": 27000,
+    "oldPrice": 33750,
+    "image": "images/p6.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "89012345-cdef-40a1-89b2-90ab12345678",
+    "name": "Tailored Cotton Derby Shoes 3",
+    "category": "shoes",
+    "price": 32000,
+    "oldPrice": 40000,
+    "image": "images/p59.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "9a0b1c2d-3e4f-4a5b-8c9d-0e1f2a3b4c6d",
+    "name": "Comfort Suede Low-Top Sneakers 3",
+    "category": "sneakers",
+    "price": 38000,
+    "oldPrice": 47500,
+    "image": "images/p58.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "8b1c2d3e-4f5a-4b6c-9d0e-1f2a3b4c5d7e",
+    "name": "Minimal Linen Chino Shorts 3",
+    "category": "shorts",
+    "price": 42000,
+    "oldPrice": 52500,
+    "image": "images/p57.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "7c2d3e4f-5a6b-4c7d-8e0f-1a2b3c4d5e6f",
+    "name": "Iconic Canvas Baseball Cap 3",
+    "category": "cap",
+    "price": 45000,
+    "oldPrice": 56250,
+    "image": "images/p56.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "6d3e4f5a-7b8c-4d9e-0f1a-2b3c4d5e6f70",
+    "name": "Structured Leather Leather Belt 3",
+    "category": "accessory",
+    "price": 3000,
+    "oldPrice": 3750,
+    "image": "images/p55.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "5e4f6a7b-8c9d-4e0f-1a2b-3c4d5e6f7081",
+    "name": "Classic Cotton T-Shirt 7",
+    "category": "t-shirt",
+    "price": 3500,
+    "oldPrice": 4375,
+    "image": "images/p54.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "4f5a6b7c-8d9e-4f0a-1b2c-3d4e5f607182",
+    "name": "Modern Denim Denim Jeans 7",
+    "category": "jeans",
+    "price": 4500,
+    "oldPrice": 5625,
+    "image": "images/p53.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "3e4f5a6b-7c8d-4e9f-0a1b-2c3d4e5f6073",
+    "name": "Slim Fit Leather Pullover Hoodie 7",
+    "category": "hoodie",
+    "price": 5500,
+    "oldPrice": 6875,
+    "image": "images/p52.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "2d3e4f5a-6b7c-4d8e-9f0a-1b2c3d4e5f60",
+    "name": "Relaxed Wool Bomber Jacket 8",
+    "category": "jacket",
+    "price": 7500,
+    "oldPrice": 9375,
+    "image": "images/p51.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "1c2d3e4f-5a6b-4c7d-8e9f-0a1b2c3d4e5f",
+    "name": "Vintage Linen T-Shirt 8",
+    "category": "t-shirt",
+    "price": 9500,
+    "oldPrice": 11875,
+    "image": "images/p50.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "0b1c2d3e-4f5a-4b6c-8d9e-0f1a2b3c4d5e",
+    "name": "Premium Polyester Denim Jeans 8",
+    "category": "jeans",
+    "price": 12500,
+    "oldPrice": 15625,
+    "image": "images/p5.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "f0e1d2c3-b4a5-4c6d-8e9f-0a1b2c3d4e5f",
+    "name": "Soft Canvas Pullover Hoodie 8",
+    "category": "hoodie",
+    "price": 15000,
+    "oldPrice": 18750,
+    "image": "images/p49.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "e1f2d3c4-b5a6-4d7e-9f0a-1b2c3d4e5f60",
+    "name": "Essential Suede Bomber Jacket 9",
+    "category": "jacket",
+    "price": 18000,
+    "oldPrice": 22500,
+    "image": "images/p48.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "c9b8a7f6-e5d4-4c3b-9a8f-0e1d2c3b4a5f",
+    "name": "Lightweight Knitted T-Shirt 9",
+    "category": "t-shirt",
+    "price": 22000,
+    "oldPrice": 27500,
+    "image": "images/p47.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "b8a7c6d5-e4f3-4b2a-9c8d-0e1f2d3c4b5a",
+    "name": "Urban Fleece Denim Jeans 9",
+    "category": "jeans",
+    "price": 27000,
+    "oldPrice": 33750,
+    "image": "images/p46.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "a7b6c5d4-e3f2-4a1b-9c8d-0e1f2a3b4c5e",
+    "name": "Sport Jersey T-Shirt 9",
+    "category": "t-shirt",
+    "price": 32000,
+    "oldPrice": 40000,
+    "image": "images/p45.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "96a5b4c3-d2e1-4f0a-9b8c-0d1e2f3a4b5c",
+    "name": "Signature Cotton Denim Jeans 10",
+    "category": "jeans",
+    "price": 38000,
+    "oldPrice": 47500,
+    "image": "images/p44.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "85b4c3d2-e1f0-4a9b-8c7d-0e1f2a3b4c6e",
+    "name": "Everyday Linen Pullover Hoodie 10",
+    "category": "hoodie",
+    "price": 42000,
+    "oldPrice": 52500,
+    "image": "images/p43.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "74c3d2e1-f0b9-4a8c-9d7e-0f1a2b3c4d5e",
+    "name": "Casual Twill Bomber Jacket 10",
+    "category": "jacket",
+    "price": 45000,
+    "oldPrice": 56250,
+    "image": "images/p42.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "63d2e1f0-b9a8-4c7d-9e0f-1a2b3c4d5e6f",
+    "name": "Heritage Denim Trousers 4",
+    "category": "trousers",
+    "price": 3000,
+    "oldPrice": 3750,
+    "image": "images/p41.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "52e1f0b9-a8c7-4d6e-9f0a-1b2c3d4e5f70",
+    "name": "Tailored Cotton Derby Shoes 4",
+    "category": "shoes",
+    "price": 3500,
+    "oldPrice": 4375,
+    "image": "images/p40.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "41f0b9a8-c7d6-4e5f-9a0b-1c2d3e4f5076",
+    "name": "Comfort Suede Low-Top Sneakers 4",
+    "category": "sneakers",
+    "price": 4500,
+    "oldPrice": 5625,
+    "image": "images/p4.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "30b9a8c7-d6e5-4f0a-9b1c-2d3e4f506172",
+    "name": "Minimal Linen Chino Shorts 4",
+    "category": "shorts",
+    "price": 5500,
+    "oldPrice": 6875,
+    "image": "images/p39.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "2fb9a8c7-d6e5-4f0a-9b1c-3d4e5f607182",
+    "name": "Iconic Canvas Baseball Cap 4",
+    "category": "cap",
+    "price": 7500,
+    "oldPrice": 9375,
+    "image": "images/p38.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "1ea8b9c7-d6f5-4e0a-9b1c-4d5e6f708192",
+    "name": "Structured Leather Leather Belt 4",
+    "category": "accessory",
+    "price": 9500,
+    "oldPrice": 11875,
+    "image": "images/p37.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "0f1e2d3c-4b5a-4c6d-8e9f-0a1b2c3d4e5f",
+    "name": "Classic Cotton T-Shirt 8",
+    "category": "t-shirt",
+    "price": 12500,
+    "oldPrice": 15625,
+    "image": "images/p36.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "1e2d3c4b-5a6f-4b7c-8d9e-0f1a2b3c4d5e",
+    "name": "Modern Denim Denim Jeans 8",
+    "category": "jeans",
+    "price": 15000,
+    "oldPrice": 18750,
+    "image": "images/p35.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "2d3c4b5a-6f7e-4c8d-9a0b-1c2d3e4f5a6b",
+    "name": "Slim Fit Leather Pullover Hoodie 8",
+    "category": "hoodie",
+    "price": 18000,
+    "oldPrice": 22500,
+    "image": "images/p34.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "3c4b5a6f-7e8d-4c9a-0b1c-2d3e4f5a6b7c",
+    "name": "Relaxed Wool Bomber Jacket 9",
+    "category": "jacket",
+    "price": 22000,
+    "oldPrice": 27500,
+    "image": "images/p33.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "4b5a6f7e-8d9c-4b0a-1c2d-3e4f5a6b7c8d",
+    "name": "Vintage Linen T-Shirt 9",
+    "category": "t-shirt",
+    "price": 27000,
+    "oldPrice": 33750,
+    "image": "images/p32.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "5a6f7e8d-9c0b-4a1c-2d3e-4f5a6b7c8d9e",
+    "name": "Premium Polyester Denim Jeans 9",
+    "category": "jeans",
+    "price": 32000,
+    "oldPrice": 40000,
+    "image": "images/p31.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "6f7e8d9c-0b1a-4c2d-3e4f-5a6b7c8d9e0f",
+    "name": "Soft Canvas Pullover Hoodie 9",
+    "category": "hoodie",
+    "price": 38000,
+    "oldPrice": 47500,
+    "image": "images/p30.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "7e8d9c0b-1a2b-4c3d-4e5f-6a7b8c9d0e1f",
+    "name": "Essential Suede Bomber Jacket 10",
+    "category": "jacket",
+    "price": 42000,
+    "oldPrice": 52500,
+    "image": "images/p3.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "8d9c0b1a-2b3c-4d4e-5f6a-7b8c9d0e1f2a",
+    "name": "Lightweight Knitted T-Shirt 10",
+    "category": "t-shirt",
+    "price": 45000,
+    "oldPrice": 56250,
+    "image": "images/p29.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "9c0b1a2b-3c4d-4e5f-6a7b-8c9d0e1f2a3b",
+    "name": "Urban Fleece Denim Jeans 10",
+    "category": "jeans",
+    "price": 3000,
+    "oldPrice": 3750,
+    "image": "images/p28.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "0b1a2c3d-4e5f-4a6b-7c8d-9e0f1a2b3c4d",
+    "name": "Sport Jersey T-Shirt 10",
+    "category": "t-shirt",
+    "price": 3500,
+    "oldPrice": 4375,
+    "image": "images/p27.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+    "name": "Signature Cotton Denim Jeans 11",
+    "category": "jeans",
+    "price": 4500,
+    "oldPrice": 5625,
+    "image": "images/p26.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "2b3c4d5e-6f7a-4b8c-9d0e-1f2a3b4c5d6e",
+    "name": "Everyday Linen Pullover Hoodie 11",
+    "category": "hoodie",
+    "price": 5500,
+    "oldPrice": 6875,
+    "image": "images/p25.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "3c4d5e6f-7a8b-4c9d-0e1f-2a3b4c5d6e7f",
+    "name": "Casual Twill Bomber Jacket 11",
+    "category": "jacket",
+    "price": 7500,
+    "oldPrice": 9375,
+    "image": "images/p24.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "4d5e6f7a-8b9c-4d0e-1f2a-3b4c5d6e7f80",
+    "name": "Heritage Denim Trousers 5",
+    "category": "trousers",
+    "price": 9500,
+    "oldPrice": 11875,
+    "image": "images/p23.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "5e6f7a8b-9c0d-4e1f-2a3b-4c5d6e7f8091",
+    "name": "Tailored Cotton Derby Shoes 5",
+    "category": "shoes",
+    "price": 12500,
+    "oldPrice": 15625,
+    "image": "images/p22.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "6f7a8b9c-0d1e-4f2a-3b4c-5d6e7f8091a2",
+    "name": "Comfort Suede Low-Top Sneakers 5",
+    "category": "sneakers",
+    "price": 15000,
+    "oldPrice": 18750,
+    "image": "images/p21.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "7a8b9c0d-1e2f-4a3b-5c6d-7e8f9012ab34",
+    "name": "Minimal Linen Chino Shorts 5",
+    "category": "shorts",
+    "price": 18000,
+    "oldPrice": 22500,
+    "image": "images/p20.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "8b9c0d1e-2f3a-4b5c-6d7e-8f9012ab3456",
+    "name": "Iconic Canvas Baseball Cap 5",
+    "category": "cap",
+    "price": 22000,
+    "oldPrice": 27500,
+    "image": "images/p2.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "9c0d1e2f-3a4b-4c5d-6e7f-89012ab34567",
+    "name": "Structured Leather Leather Belt 5",
+    "category": "accessory",
+    "price": 27000,
+    "oldPrice": 33750,
+    "image": "images/p19.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "0d1e2f3a-4b5c-4d6e-7f80-9012ab345678",
+    "name": "Classic Cotton T-Shirt 9",
+    "category": "t-shirt",
+    "price": 32000,
+    "oldPrice": 40000,
+    "image": "images/p18.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "1e2f3a4b-5c6d-4e7f-8090-1234567890ab",
+    "name": "Modern Denim Denim Jeans 9",
+    "category": "jeans",
+    "price": 38000,
+    "oldPrice": 47500,
+    "image": "images/p17.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "2f3a4b5c-6d7e-4f80-9012-34567890ab1c",
+    "name": "Slim Fit Leather Pullover Hoodie 9",
+    "category": "hoodie",
+    "price": 42000,
+    "oldPrice": 52500,
+    "image": "images/p16.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "3a4b5c6d-7e8f-4091-0234-567890ab12cd",
+    "name": "Relaxed Wool Bomber Jacket 12",
+    "category": "jacket",
+    "price": 45000,
+    "oldPrice": 56250,
+    "image": "images/p15.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "4b5c6d7e-8f90-41a2-3456-7890ab12cd34",
+    "name": "Vintage Linen T-Shirt 10",
+    "category": "t-shirt",
+    "price": 3000,
+    "oldPrice": 3750,
+    "image": "images/p14.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "5c6d7e8f-9012-42b3-4567-890ab12cd345",
+    "name": "Premium Polyester Denim Jeans 10",
+    "category": "jeans",
+    "price": 3500,
+    "oldPrice": 4375,
+    "image": "images/p13.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "6d7e8f90-1234-43c4-5678-90ab12cd3456",
+    "name": "Soft Canvas Pullover Hoodie 10",
+    "category": "hoodie",
+    "price": 4500,
+    "oldPrice": 5625,
+    "image": "images/p12.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "7e8f9012-3456-44d5-6789-0ab12cd34567",
+    "name": "Essential Suede Bomber Jacket 13",
+    "category": "jacket",
+    "price": 5500,
+    "oldPrice": 6875,
+    "image": "images/p112.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "8f901234-5678-45e6-7890-ab12cd345678",
+    "name": "Lightweight Knitted T-Shirt 11",
+    "category": "t-shirt",
+    "price": 7500,
+    "oldPrice": 9375,
+    "image": "images/p111.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "90123456-789a-46f7-8901-b2cd3456789a",
+    "name": "Urban Fleece Denim Jeans 11",
+    "category": "jeans",
+    "price": 9500,
+    "oldPrice": 11875,
+    "image": "images/p110.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "01234567-89ab-47g8-9012-cd3456789abc",
+    "name": "Sport Jersey T-Shirt 11",
+    "category": "t-shirt",
+    "price": 12500,
+    "oldPrice": 15625,
+    "image": "images/p11.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "12345678-9abc-48h9-0123-d3456789abcd",
+    "name": "Signature Cotton Denim Jeans 12",
+    "category": "jeans",
+    "price": 15000,
+    "oldPrice": 18750,
+    "image": "images/p109.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "23456789-abcd-49i0-1234-e456789abcde",
+    "name": "Everyday Linen Pullover Hoodie 12",
+    "category": "hoodie",
+    "price": 18000,
+    "oldPrice": 22500,
+    "image": "images/p108.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "3456789a-bcde-4aj1-2345-f56789abcd01",
+    "name": "Casual Twill Bomber Jacket 14",
+    "category": "jacket",
+    "price": 22000,
+    "oldPrice": 27500,
+    "image": "images/p107.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "456789ab-cdef-4bk2-3456-0789abcd1234",
+    "name": "Heritage Denim Trousers 6",
+    "category": "trousers",
+    "price": 27000,
+    "oldPrice": 33750,
+    "image": "images/p106.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "56789abc-def0-4cl3-4567-189abcd23456",
+    "name": "Tailored Cotton Derby Shoes 6",
+    "category": "shoes",
+    "price": 32000,
+    "oldPrice": 40000,
+    "image": "images/p105.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "6789abcd-ef01-4dm4-5678-29abcd345678",
+    "name": "Comfort Suede Low-Top Sneakers 6",
+    "category": "sneakers",
+    "price": 38000,
+    "oldPrice": 47500,
+    "image": "images/p104.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "789abcde-f012-4en5-6789-3abcd4567890",
+    "name": "Minimal Linen Chino Shorts 6",
+    "category": "shorts",
+    "price": 42000,
+    "oldPrice": 52500,
+    "image": "images/p103.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "89abcd01-2345-4fo6-789a-4abcd5678901",
+    "name": "Iconic Canvas Baseball Cap 6",
+    "category": "cap",
+    "price": 45000,
+    "oldPrice": 56250,
+    "image": "images/p102.jpg",
+    "inStock": "low"
+  },
+  {
+    "id": "9abcd012-3456-4gp7-89ab-5bcde6789012",
+    "name": "Structured Leather Leather Belt 6",
+    "category": "accessory",
+    "price": 3000,
+    "oldPrice": 3750,
+    "image": "images/p101.jpg",
+    "inStock": "out"
+  },
+  {
+    "id": "abcd1234-5678-4hq8-90bc-6cdef7890123",
+    "name": "Classic Cotton T-Shirt 10",
+    "category": "t-shirt",
+    "price": 3500,
+    "oldPrice": 4375,
+    "image": "images/p100.jpg",
+    "inStock": "high"
+  },
+  {
+    "id": "bcde2345-6789-4ir9-01cd-7def89012345",
+    "name": "Modern Denim Denim Jeans 10",
+    "category": "jeans",
+    "price": 4500,
+    "oldPrice": 5625,
+    "image": "images/p99.jpg",
+    "inStock": "medium"
+  },
+  {
+    "id": "d9e8f7a6-b5c4-4d3e-9f8a-7b6c5d4e3f2a",
+    "name": "Slim Fit Leather Pullover Hoodie 11",
+    "category": "hoodie",
+    "price": 5500,
+    "oldPrice": 6875,
+    "image": "images/p1.jpg",
+    "inStock": "out"
+  }
+]
