@@ -397,7 +397,10 @@ if ('IntersectionObserver' in window) {
                     container.appendChild(card);
                 });
 
-            }).catch(err => console.error('Failed to load products.json:', err));
+            }).catch(err => console.error('Failed to load products.json:', err)).finally(() => {
+                // notify other scripts that products have been rendered
+                try{ document.dispatchEvent(new Event('products:rendered')); }catch(e){}
+            });
         });
     })();
     </script>
@@ -489,6 +492,10 @@ if ('IntersectionObserver' in window) {
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            attachWishlistBehavior();
+        });
+        // Ensure wishlist UI attaches after dynamic product rendering
+        document.addEventListener('products:rendered', () => {
             attachWishlistBehavior();
         });
     })();
