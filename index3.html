@@ -370,6 +370,19 @@
                         if(product.oldPrice){ const old = document.createElement('span'); old.className = 'p-old-price'; old.textContent = '₦' + product.oldPrice; priceEl.appendChild(old); }
                         card.appendChild(priceEl);
 
+                        // stock status (copied from wishlist.html style)
+                        (function(){
+                            const s = String(product.inStock || '').toLowerCase();
+                            let cls = 'in-stock';
+                            let txt = 'In Stock';
+                            if(s === 'low') { cls = 'low-stock'; txt = 'Low stock'; }
+                            else if(s === 'out') { cls = 'low-stock'; txt = 'Out of Stock'; }
+                            const stockEl = document.createElement('div');
+                            stockEl.className = 'stock-status ' + cls;
+                            stockEl.innerHTML = '<div class="status-dot"></div> ' + txt;
+                            card.appendChild(stockEl);
+                        })();
+
                         const btn = document.createElement('div'); btn.className = 'add-cart-btn';
                         if(String(product.inStock).toLowerCase() === 'out'){ btn.textContent = 'Out of stock'; btn.classList.add('disabled'); btn.setAttribute('aria-disabled','true'); }
                         else { btn.textContent = 'Add to Cart'; }
