@@ -781,13 +781,6 @@
             .header-icons .icon-item { font-size: 20px; }
         }
 
-/* Ensure location text and dropdown work on very small screens */
-@media (max-width: 480px) {
-    .location-wrapper { min-width: 140px; }
-    .country-select { white-space: normal; font-size: 13px; }
-    .state-list, .lga-list { left: 0; top: 100%; }
-}
-
 
 
         .location-wrapper {
@@ -880,6 +873,17 @@
 }
 .lga-list > li:hover{
     background-color: rgb(48, 0, 44);
+}
+
+/* Ensure the location text can wrap and the control is tappable on mobile */
+.country-select{ display:inline-flex; align-items:center; gap:8px; position:relative; }
+.country-select .location-text{ display:inline-block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:420px; }
+.country-select .caret{ font-size:12px; opacity:0.9; }
+
+@media (max-width: 768px) {
+    .top-bar{ height:auto; padding:8px 5%; align-items:flex-start; }
+    .country-select .location-text{ white-space:normal; max-width: calc(100vw - 120px); font-size:13px; line-height:1.1; }
+    .top-bar-links{ margin-top:6px; }
 }
 
 .search-suggestions {

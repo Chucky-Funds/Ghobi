@@ -237,7 +237,12 @@ updateCountryText();
 
 // Update display
 function updateCountryText() {
-  countrySelect.innerHTML = `<i class="fas fa-map-marker-alt"></i> Nigeria (NGN), ${selectedState}, ${selectedLGA} <i class="fas fa-caret-down"></i>`;
+  const textEl = countrySelect.querySelector('.location-text');
+  if (textEl) {
+    textEl.textContent = `Nigeria (NGN), ${selectedState}, ${selectedLGA}`;
+  } else {
+    countrySelect.innerHTML = `<i class="fas fa-map-marker-alt"></i> Nigeria (NGN), ${selectedState}, ${selectedLGA} <i class="fas fa-caret-down"></i>`;
+  }
 }
 
 // Show state list on click
@@ -310,48 +315,17 @@ countrySelect.addEventListener('click', function (e) {
         lgaUl.remove();
       });
     });
-    // Also support click/tap to show LGAs on touch devices (no hover)
-    li.addEventListener('click', (ev) => {
-      ev.stopPropagation();
-      document.querySelectorAll('.lga-list').forEach(el => el.remove());
-
-      const lgaUl = document.createElement('ul');
-      lgaUl.className = 'lga-list';
-
-      const lgas = statesWithLGAs[state];
-      if (!lgas) return;
-
-      lgas.forEach(lga => {
-        const lgaLi = document.createElement('li');
-        lgaLi.textContent = lga;
-
-        lgaLi.addEventListener('click', () => {
-          selectedState = state;
-          selectedLGA = lga;
-          updateCountryText();
-
-          stateUl.remove();
-          lgaUl.remove();
-        });
-
-        lgaUl.appendChild(lgaLi);
-      });
-
-      wrapper.appendChild(lgaUl);
-
-      const liRect = li.getBoundingClientRect();
-      const wrapperRect = wrapper.getBoundingClientRect();
-
-      lgaUl.style.position = 'absolute';
-      lgaUl.style.top = `${liRect.top - wrapperRect.top + wrapper.scrollTop}px`;
-      lgaUl.style.left = `${stateUl.offsetWidth}px`;
-      lgaUl.style.zIndex = '1000';
-
-      // On mobile allow tapping elsewhere to close; leave removal on scroll handled globally
-    });
   });
 
   wrapper.appendChild(stateUl);
+});
+
+// Make the country-select toggle also respond on keyboard and touch in an accessible way
+countrySelect.addEventListener('keydown', function(e){
+  if(e.key === 'Enter' || e.key === ' '){
+    e.preventDefault();
+    this.click();
+  }
 });
 
 // Close dropdown if click outside
