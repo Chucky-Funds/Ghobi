@@ -1065,6 +1065,17 @@
             box-shadow: 0 5px 15px 1px var(--neon-pink);
             transition: all 0.5s ease;
         }
+
+        /* Disabled / out-of-stock button appearance */
+        .add-cart-btn.disabled{
+            background: #000 !important;
+            color: #777 !important;
+            pointer-events: none;
+            cursor: not-allowed;
+            box-shadow: none !important;
+            opacity: 1; /* keep full opacity so background is solid black */
+        }
+        .add-cart-btn.disabled:hover{ transform: none; box-shadow: none; }
         .p-title{
             font-size: 16px;
             font-weight: bold;

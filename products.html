@@ -403,7 +403,7 @@ if ('IntersectionObserver' in window) {
                     })();
 
                     const btn = document.createElement('div'); btn.className = 'add-cart-btn';
-                    if(String(product.inStock).toLowerCase() === 'out'){ btn.textContent = 'Out of stock'; btn.classList.add('disabled'); btn.setAttribute('aria-disabled','true'); }
+                    if(String(product.inStock).toLowerCase() === 'out'){ btn.textContent = 'Add to Cart'; btn.classList.add('disabled'); btn.setAttribute('aria-disabled','true'); }
                     else { btn.textContent = 'Add to Cart'; }
                     card.appendChild(btn);
 
