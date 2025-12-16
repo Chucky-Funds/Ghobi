@@ -374,9 +374,9 @@
                         (function(){
                             const s = String(product.inStock || '').toLowerCase();
                             let cls = 'in-stock';
-                            let txt = 'In Stock';
-                            if(s === 'low') { cls = 'low-stock'; txt = 'Low stock'; }
-                            else if(s === 'out') { cls = 'out-of-stock'; txt = 'Out of Stock'; }
+                            let txt = '• In Stock';
+                            if(s === 'low') { cls = 'low-stock'; txt = '• Low stock'; }
+                            else if(s === 'out') { cls = 'out-of-stock'; txt = '• Out of Stock'; }
                             const stockEl = document.createElement('div');
                             stockEl.className = 'stock-status ' + cls;
                             stockEl.innerHTML = '<div class="status-dot"></div> ' + txt;
