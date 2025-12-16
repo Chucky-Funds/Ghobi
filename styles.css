@@ -736,7 +736,7 @@
                 .header-icons{
                     display: none;
                 }
-            .main-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .main-grid { grid-template-columns: 1fr; gap: 10px; }
             .cat-grid { grid-template-columns: 1fr; }
             
             .footer-grid { grid-template-columns: 1fr 1fr; }
