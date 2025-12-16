@@ -364,8 +364,6 @@
                         const title = document.createElement('div'); title.className = 'p-title'; title.textContent = product.name || product.title || '';
                         card.appendChild(title);
 
-                        const meta = document.createElement('div'); meta.className = 'p-meta'; meta.textContent = product.category || '';
-                        card.appendChild(meta);
 
                         const priceEl = document.createElement('div'); priceEl.className = 'p-price';
                         priceEl.textContent = product.price !== undefined && product.price !== null ? '₦' + product.price : '';
@@ -373,7 +371,7 @@
                         card.appendChild(priceEl);
 
                         const btn = document.createElement('div'); btn.className = 'add-cart-btn';
-                        if(product.inStock === 'out' || product.inStock === false || product.inStock === 0){ btn.textContent = 'Out of stock'; btn.classList.add('disabled'); btn.setAttribute('disabled','true'); }
+                        if(String(product.inStock).toLowerCase() === 'out'){ btn.textContent = 'Out of stock'; btn.classList.add('disabled'); btn.setAttribute('aria-disabled','true'); }
                         else { btn.textContent = 'Add to Cart'; }
                         card.appendChild(btn);
 

@@ -55,7 +55,7 @@
         <h3 class="grid-header">Search</h3>
         <div class="main-grid">
             <!-- Products will be populated deterministically from products.json -->
-        </div>
+            <div class="product-card">
                 <div class="card-img-wrap"><img src="images/background5.jpg" class="card-img"></div>
                 <div class="p-title">Classic White Shirt</div>
                 <div class="p-price">₦35</div>
@@ -383,8 +383,6 @@ if ('IntersectionObserver' in window) {
                     const title = document.createElement('div'); title.className = 'p-title'; title.textContent = product.name || product.title || '';
                     card.appendChild(title);
 
-                    const meta = document.createElement('div'); meta.className = 'p-meta'; meta.textContent = product.category || '';
-                    card.appendChild(meta);
 
                     const priceEl = document.createElement('div'); priceEl.className = 'p-price';
                     priceEl.textContent = product.price !== undefined && product.price !== null ? '₦' + product.price : '';
@@ -392,7 +390,7 @@ if ('IntersectionObserver' in window) {
                     card.appendChild(priceEl);
 
                     const btn = document.createElement('div'); btn.className = 'add-cart-btn';
-                    if(product.inStock === 'out' || product.inStock === false || product.inStock === 0){ btn.textContent = 'Out of stock'; btn.classList.add('disabled'); btn.setAttribute('disabled','true'); }
+                    if(String(product.inStock).toLowerCase() === 'out'){ btn.textContent = 'Out of stock'; btn.classList.add('disabled'); btn.setAttribute('aria-disabled','true'); }
                     else { btn.textContent = 'Add to Cart'; }
                     card.appendChild(btn);
 
@@ -479,9 +477,8 @@ if ('IntersectionObserver' in window) {
                     const title = (card.querySelector('.p-title')||{}).textContent.trim() || 'Product';
                     const img = (card.querySelector('img')||{}).src || '';
                     const price = (card.querySelector('.p-price')||{}).textContent.trim() || '';
-                    const meta = (card.querySelector('.p-meta')||{}).textContent || '';
                     const items = getWish();
-                    if(liked){ if(!items.find(i=>i.title===title)) items.push({ id: Date.now()+'-'+Math.floor(Math.random()*999), title, img, price, meta }); }
+                    if(liked){ if(!items.find(i=>i.title===title)) items.push({ id: Date.now()+'-'+Math.floor(Math.random()*999), title, img, price }); }
                     else { const idx = items.findIndex(i=>i.title===title); if(idx>-1) items.splice(idx,1); }
                     setWish(items);
                 });
