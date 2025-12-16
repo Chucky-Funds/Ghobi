@@ -781,6 +781,13 @@
             .header-icons .icon-item { font-size: 20px; }
         }
 
+/* Ensure location text and dropdown work on very small screens */
+@media (max-width: 480px) {
+    .location-wrapper { min-width: 140px; }
+    .country-select { white-space: normal; font-size: 13px; }
+    .state-list, .lga-list { left: 0; top: 100%; }
+}
+
 
 
         .location-wrapper {
