@@ -1088,3 +1088,20 @@
         .section-container{
             margin-bottom: 40px;
         }
+        .stock-status{
+            font-size: 12px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .stock-status.in-stock{
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        .stock-status.out-of-stock{
+            color: #ff0000;
+            text-shadow: 0 0 5px #ff0000;
+        }
+        .stock-status.low-stock{
+            color: #ffff00;
+            text-shadow: 0 0 5px #ffff00;
+        }

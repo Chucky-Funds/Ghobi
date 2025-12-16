@@ -395,7 +395,7 @@ if ('IntersectionObserver' in window) {
                         let cls = 'in-stock';
                         let txt = 'In Stock';
                         if(s === 'low') { cls = 'low-stock'; txt = 'Low stock'; }
-                        else if(s === 'out') { cls = 'low-stock'; txt = 'Out of Stock'; }
+                        else if(s === 'out') { cls = 'out-of-stock'; txt = 'Out of Stock'; }
                         const stockEl = document.createElement('div');
                         stockEl.className = 'stock-status ' + cls;
                         stockEl.innerHTML = '<div class="status-dot"></div> ' + txt;
